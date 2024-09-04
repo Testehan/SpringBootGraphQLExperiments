@@ -1,0 +1,40 @@
+After starting the application, in the browser nagivate to the below URL to get a UI console
+    http://localhost:8080/graphiql
+
+In that UI, you can add a query like the one from below, to get all the book names:
+    {
+      books
+      {
+        name
+      }
+    }
+
+If you also want the pagecount field :
+    {
+      books
+      {
+        name
+        pageCount
+      }
+    }
+
+If you want to search for a book by id:
+    {
+      bookById(id:1)
+      {
+        name
+        pageCount
+      }
+    }
+
+If we want to get the author of a book as well:
+    {
+      bookById(id:1)
+      {
+        name
+        pageCount
+        author {
+          name
+        }
+      }
+    }
